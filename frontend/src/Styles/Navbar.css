@@ -1,0 +1,24 @@
+.nav-parent{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.w-15{
+    width: 15%;
+}
+.w-45{
+    width: 45%;
+}
+.w-25{
+    width: 25%;
+}
+.nav-parent p {
+    cursor: pointer;
+}
