@@ -15,9 +15,24 @@ import UseEffect3 from './Components/08-12/UseEffect3';
 import UseEffect4 from './Components/08-12/UseEffect4';
 import DynamicRouting from './Components/08-12/DynamicRouting';
 import UseParams from './Components/08-12/UseParams';
+import PropsMaps from './Components/09-12/PropsMaps';
+import { useState } from 'react';
+import MapObject from './Components/09-12/MapObject';
+import StyleComponents from './Components/09-12/StyleComponents';
+
+
+
+
+
 
 
 function App() {
+
+  const[MyName,setMyName] = useState("Awdiz")
+  const[Students,setStudents] = useState([{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"sky",marks:"100"},{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"sky",marks:"100"},{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"sky",marks:"100"}])
+  function ChangeName(){
+    setMyName("Awdiz Institute.")
+  }
   return (
     <div className="App">
       <Navbar/>
@@ -34,8 +49,11 @@ function App() {
          <Route path='/useEffect4' element={<UseEffect4/>}/>
          <Route path='/dynamicRouting' element={<DynamicRouting/>}/>
          <Route path='/useParams/:age' element={<UseParams/>}/>
-         <Route path='/PropsMaps' element={<PropsMaps/>}/>
+         <Route path='/PropsMaps' element={<PropsMaps kuchbhi={MyName} Myage="25" ChangName={ChangeName} MyStudents={["Akash","Sky","Sunny","Bobby"]}/>}/>
+         <Route path='/MapObject' element={<MapObject MyStudentsData={Students}/>}/>
+        <Route path='StyleComponents' element={<StyleComponents/>}/>
       </Routes>
+
       <Footer/>
     </div>
   );
