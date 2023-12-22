@@ -16,13 +16,15 @@ import UseEffect4 from './Components/08-12/UseEffect4';
 import DynamicRouting from './Components/08-12/DynamicRouting';
 import UseParams from './Components/08-12/UseParams';
 import PropsMaps from './Components/09-12/PropsMaps';
-import { useState } from 'react';
+import { Children,useState} from 'react';
 import MapObject from './Components/09-12/MapObject';
 import StyleComponents from './Components/09-12/StyleComponents';
-
-
-
-
+import Js from './Components/10-12/Js';
+import ChildrenProp from './Components/10-12/ChildrenProp';
+import RegisterForm from './Components/10-12/RegisterForm';
+import LoginForm from './Components/15-12/LoginForm';
+import AllProducts from './Components/16-12/AllProducts';
+import SingleProducts from './Components/16-12/SingleProducts';
 
 
 
@@ -51,8 +53,16 @@ function App() {
          <Route path='/useParams/:age' element={<UseParams/>}/>
          <Route path='/PropsMaps' element={<PropsMaps kuchbhi={MyName} Myage="25" ChangName={ChangeName} MyStudents={["Akash","Sky","Sunny","Bobby"]}/>}/>
          <Route path='/MapObject' element={<MapObject MyStudentsData={Students}/>}/>
-        <Route path='StyleComponents' element={<StyleComponents/>}/>
-      </Routes>
+         <Route path='/StyleComponents' element={<StyleComponents/>}/>
+         <Route path='/js' element={<Js />} />
+         <Route path='/Childrean-Prop' element={<ChildrenProp/>}/>
+         <Route path='/RegisterForm' element={<RegisterForm/>}/>
+         <Route path='/LoginForm' element={<LoginForm/>}/>
+         <Route path='/AllProducts' element={<AllProducts/>}/>
+         <Route path='/SingleProducts/:id' element={<SingleProducts/>}/>
+         
+         
+        </Routes>
 
       <Footer/>
     </div>

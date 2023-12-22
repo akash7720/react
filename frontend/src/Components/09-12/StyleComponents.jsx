@@ -1,13 +1,13 @@
 import React from 'react'
+import Styled from 'styled-components'
 
-import Styled from "Style-Components"
 const StyleComponents = () => {
-    const myComponents = Styled.div` 
+    const MyComponents = Styled.div` 
     color:red;
     font-size:40px;
     `;
   return ( 
-    <myComponents> StyleComponents</myComponents>
+    <MyComponents> StyleComponents</MyComponents>
   )
 }
 
