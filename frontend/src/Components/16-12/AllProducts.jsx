@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import toast from 'react-hot-toast'
 
 const AllProducts = () => {
 
@@ -20,15 +21,17 @@ const AllProducts = () => {
 
     function Routing(id){
     
-    router(`/SingleProducts/:${id}`);
+    router(`/SingleProducts/${id}`);
 
     }
     useEffect(()=>{
         // alert("component rendered on browser...")
+        toast.success("Hi from todos..")
         getData();
     },[])
 
     
+
   return (
     <div>
         {products?.length? <div style={{display:'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>

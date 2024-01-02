@@ -26,8 +26,8 @@ const SingleProducts = () => {
   }, [id]);
   return (
     <div>
-      <h1>{productsData.title}</h1>
-      <img src={productsData.image} />
+      <h3>{productsData.title}</h3>
+      <img style={{ height: "300px",width:'20%', margin: 'auto', border:'2px solid red' }} src={productsData.image} />
     </div>
   );
 };

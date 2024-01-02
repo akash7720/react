@@ -24,7 +24,19 @@ import ChildrenProp from './Components/10-12/ChildrenProp';
 import RegisterForm from './Components/10-12/RegisterForm';
 import LoginForm from './Components/15-12/LoginForm';
 import AllProducts from './Components/16-12/AllProducts';
-import SingleProducts from './Components/16-12/SingleProducts';
+import SingleProducts from './Components/20-12/SingleProducts';
+import UseMemo from './Components/22-12/UseMemo';
+import Todos from './Components/23-12/Todos';
+import UseCallback from './Components/23-12/UseCallback';
+import UseReducer from './Components/24-12/UseReducer';
+import ReduxCounter from './Components/31-12-redux/ReduxCounter';
+import Blogs from './Components/Blogs-3-24/Blogs';
+import RegisterBlogs from './Components/Blogs-3-24/RegisterBlogs';
+import LoginBlogs from './Components/Blogs-3-24/LoginBlogs';
+import CreateBlog from './Components/Blogs-3-24/CreateBlog';
+import EditBlog from './Components/Blogs-3-24/EditBlog';
+
+
 
 
 
@@ -40,7 +52,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='*' element={<NoPageFound/>}/>
-         <Route path='/' element={<Home/>}/>
+         {/* <Route path='/' element={<Home/>}/> */}
          <Route path='/Login' element={<Login/>}/>
          <Route path='/Register' element={<Register/>}/>
          <Route path='/Counter' element={<Counter/>}/>
@@ -60,8 +72,19 @@ function App() {
          <Route path='/LoginForm' element={<LoginForm/>}/>
          <Route path='/AllProducts' element={<AllProducts/>}/>
          <Route path='/SingleProducts/:id' element={<SingleProducts/>}/>
-         
-         
+         <Route path='/UseMemo' element={<UseMemo/>}/>
+         <Route path='/Todos' element={<Todos/>}/> 
+         <Route path='/UseCallback' element={<UseCallback/>}/>
+         <Route path='/UseReducer' element={<UseReducer/>}/>
+         <Route path='/reduxcounter' element={<ReduxCounter/>}/>
+
+
+         <Route path='/' element={<Blogs/>}/>
+        <Route path='/RegisterBlogs' element={<RegisterBlogs/>}/> 
+        <Route path='/LoginBlogs' element={<LoginBlogs/>}/> 
+        <Route path='/CreateBlog' element={<CreateBlog/>}/> 
+        <Route path='/EditBlog' element={<EditBlog/>}/> 
+
         </Routes>
 
       <Footer/>

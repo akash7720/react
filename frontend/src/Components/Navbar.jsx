@@ -9,14 +9,14 @@ function Navbar(){
             <p onClick={ ()=>router('/')}>Home</p>
         </div>
        
-        <div className='flex w-45'>
+        {/* <div className='flex w-45'>
             <p>MAN</p>
             <p>WOMAN</p>
             <p>KIDS</p>
-        </div>
+        </div> */}
         <div className='flex w-25'>
-          <p onClick={ ()=>router('/Login')}>Login</p>
-          <p onClick={ ()=>router('/Register')}>Register</p>
+          <p onClick={ ()=>router('/LoginBlogs')}>Login</p>
+          <p onClick={ ()=>router('/RegisterBlogs')}>Register</p>
         </div>
     </div>
   )
