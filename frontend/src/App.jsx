@@ -35,6 +35,8 @@ import RegisterBlogs from './Components/Blogs-3-24/RegisterBlogs';
 import LoginBlogs from './Components/Blogs-3-24/LoginBlogs';
 import CreateBlog from './Components/Blogs-3-24/CreateBlog';
 import EditBlog from './Components/Blogs-3-24/EditBlog';
+import CounterAA from './Components/for-test/CounterAA';
+
 
 
 
@@ -43,7 +45,7 @@ import EditBlog from './Components/Blogs-3-24/EditBlog';
 function App() {
 
   const[MyName,setMyName] = useState("Awdiz")
-  const[Students,setStudents] = useState([{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"sky",marks:"100"},{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"sky",marks:"100"},{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"sky",marks:"100"}])
+  const[Students,setStudents] = useState([{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"sky",marks:"100"},{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"Sunny",marks:"100"},{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"Bobby",marks:"100"}])
   function ChangeName(){
     setMyName("Awdiz Institute.")
   }
@@ -52,7 +54,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='*' element={<NoPageFound/>}/>
-         {/* <Route path='/' element={<Home/>}/> */}
+         <Route path='/' element={<Home/>}/>
          <Route path='/Login' element={<Login/>}/>
          <Route path='/Register' element={<Register/>}/>
          <Route path='/Counter' element={<Counter/>}/>
@@ -84,7 +86,7 @@ function App() {
         <Route path='/LoginBlogs' element={<LoginBlogs/>}/> 
         <Route path='/CreateBlog' element={<CreateBlog/>}/> 
         <Route path='/EditBlog' element={<EditBlog/>}/> 
-
+        <Route path='/Counter-1-1' element={<CounterAA/>}/> 
         </Routes>
 
       <Footer/>

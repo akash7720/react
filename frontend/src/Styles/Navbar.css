@@ -1,3 +1,9 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+
 .nav-parent{
     border: 2px solid black;
     display: flex;
@@ -6,7 +12,7 @@
 .flex{
     display: flex;
     justify-content: space-around;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bolder;
 }
 
@@ -19,6 +25,23 @@
 .w-25{
     width: 25%;
 }
+
+
 .nav-parent p {
-    cursor: pointer;
+    cursor: pointer;    
+}
+
+
+.w-25>:hover{
+    scale: 1.05;
+    color:  rgb(91, 84, 84);
+}
+.w-45>:hover{
+    scale: 1.05;
+    color: rgb(91, 84, 84);
+}
+
+.w-15>:hover{
+    scale: 1.05;
+    color: rgb(91, 84, 84);
 }

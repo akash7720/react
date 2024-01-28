@@ -4,18 +4,19 @@ function Counter(){
     const[Counter, setCounter] = useState(1)
     console.log(Counter ,"-Counter")
 
-    function increment(){
+function increment(){
        setCounter((prevValue) => prevValue + 1)
     }
-    function Decrement(){
+function Decrement(){
       setCounter((prevValue) => prevValue -1)
     }
-    function test(){
+function test(){
        setCounter(Counter +1 )
     }
-    function IncrementBy2(){
+function IncrementBy2(){
       setCounter((prevValue) => prevValue +2)
     }
+    
     
   return(
     <div>

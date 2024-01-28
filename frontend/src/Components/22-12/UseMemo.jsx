@@ -25,7 +25,7 @@ const UseMemo = () => {
     return (
         <div>
             <div>
-                <h2>My Todos :</h2>
+                <h1>My Todos :</h1>
                 {todos.map((todo, index) => {
                     return <p key={index}>{todo}</p>;
                 })}
@@ -35,7 +35,7 @@ const UseMemo = () => {
             <div>
                 Count: {count}
                 <button onClick={increment}>+</button>
-                <h2>Expensive Calculation</h2>
+                <h1>Expensive Calculation</h1>
                 {calculation}
             </div>
         </div>
