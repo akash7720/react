@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { UseState } from 'react'
 
 function js() {
-    const[ShowText, setShowText] = useState(false)
+    const[ShowText, setShowText] = UseState(false)
     function Update(){
         setShowText(!ShowText)
     }
@@ -14,4 +14,4 @@ function js() {
   )
 }
 
-export default js
+export default js;
