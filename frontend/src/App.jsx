@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import{ Route,Routes} from 'react-router-dom'
 import Home from './Components/Home';
@@ -16,7 +16,7 @@ import UseEffect4 from './Components/08-12/UseEffect4';
 import DynamicRouting from './Components/08-12/DynamicRouting';
 import UseParams from './Components/08-12/UseParams';
 import PropsMaps from './Components/09-12/PropsMaps';
-import { Children,useState} from 'react';
+import {useState} from 'react';
 import MapObject from './Components/09-12/MapObject';
 import StyleComponents from './Components/09-12/StyleComponents';
 import Js from './Components/10-12/Js';
@@ -36,7 +36,7 @@ import LoginBlogs from './Components/Blogs-3-24/LoginBlogs';
 import CreateBlog from './Components/Blogs-3-24/CreateBlog';
 import EditBlog from './Components/Blogs-3-24/EditBlog';
 import CounterAA from './Components/for-test/CounterAA';
-
+import AddProducts from './Components/AddProducts';
 
 
 
@@ -45,7 +45,7 @@ import CounterAA from './Components/for-test/CounterAA';
 function App() {
 
   const[MyName,setMyName] = useState("Awdiz")
-  const[Students,setStudents] = useState([{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"sky",marks:"100"},{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"Sunny",marks:"100"},{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"Bobby",marks:"100"}])
+  const[Students] = useState([{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"sky",marks:"100"},{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"Sunny",marks:"100"},{image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPO2-ecPWY1EcPN8Casm77mtR7qhUhIPK_4g&s" ,name:"Bobby",marks:"100"}])
   function ChangeName(){
     setMyName("Awdiz Institute.")
   }
@@ -79,6 +79,7 @@ function App() {
          <Route path='/UseCallback' element={<UseCallback/>}/>
          <Route path='/UseReducer' element={<UseReducer/>}/>
          <Route path='/reduxcounter' element={<ReduxCounter/>}/>
+         <Route path='/AddProducts' element={<AddProducts/>}/>
 
 
          <Route path='/' element={<Blogs/>}/>
