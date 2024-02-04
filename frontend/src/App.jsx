@@ -37,9 +37,9 @@ import CreateBlog from './Components/Blogs-3-24/CreateBlog';
 import EditBlog from './Components/Blogs-3-24/EditBlog';
 import CounterAA from './Components/for-test/CounterAA';
 import AddProducts from './Components/AddProducts';
-
-
-
+import AddTodos from './Components/todoapplaction/AddTodos'
+import LoginTodos from './Components/todoapplaction/LoginTodos'
+import RegisterTodos from './Components/todoapplaction/RegisterTodos';
 
 
 function App() {
@@ -80,6 +80,10 @@ function App() {
          <Route path='/UseReducer' element={<UseReducer/>}/>
          <Route path='/reduxcounter' element={<ReduxCounter/>}/>
          <Route path='/AddProducts' element={<AddProducts/>}/>
+         <Route path='/AddTodos' element={<AddTodos/>}/>
+         <Route path='/LoginTodos' element={<LoginTodos/>}/>
+         <Route path='/RegisterTodos' element={<RegisterTodos/>}/>
+         
 
 
          <Route path='/' element={<Blogs/>}/>

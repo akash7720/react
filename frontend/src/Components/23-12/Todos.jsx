@@ -3,7 +3,7 @@ import React from 'react'
 import toast from 'react-hot-toast'
 
 const Todos = ({AddTodo,todos}) => {
-    toast.success("Hi from todos..")
+   toast.success("Hi from todos..")
   return (
     <div>
         <h1>Todos</h1>
@@ -11,6 +11,7 @@ const Todos = ({AddTodo,todos}) => {
              <h2>{todo}</h2>
         ))}
        <button onClick={AddTodo}>Add todo</button>
+       
     </div>
   )
 }

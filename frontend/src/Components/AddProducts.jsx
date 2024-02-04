@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 import api from './Halper/AxiosConfig';
 
 
@@ -8,14 +8,14 @@ const AddProducts = () => {
   const[producteData,setproducteData] = useState({Name:"",Prise:"",Image:"",Category:"",Quantity:""})
 
   function handalChange(e){
-    setproducteData({...producteData, [e.target.name]: e.target.value });}
+    setproducteData({...producteData, [e.target.name]: e.target.value })}
   
-async function handalSubmit(e){
-    e.preventDefult()
+  async function handleSubmit(e){
+    e.preventDefault()
     if(producteData.Name && producteData.Prise && producteData.Image && producteData.Category && producteData.Quantity ){
          
       try{
-        const response = await api.post('produsct/AddProduct',{producteData})
+        const response = await api.post('/Product/Addproducts',{productData : producteData})
           if(response?.data.success){
              toast.success(response.data.massgae)
              setproducteData({Name:"",Prise:"",Image:"",Category:"",Quantity:""})
@@ -29,10 +29,8 @@ async function handalSubmit(e){
 }
   return (
     <div>
-    
-      
       <h1>AddProducts</h1><br/>
-      <from  onSubmit={handalSubmit}>
+      <form  onSubmit={handleSubmit}> 
       <label>Name:</label><br/>
       <input type='text' onChange={handalChange} value={producteData.Name} name='Name' ></input><br/>
       <label>Prise:</label><br/>
@@ -44,7 +42,7 @@ async function handalSubmit(e){
       <label>Quantity:</label><br/>
       <input type='number'  onChange={handalChange}  value={producteData.Quantity}  name='Quantity'  ></input><br/>
       <input type='submit' value="Add Products"></input><br/><br/>
-      </from>
+      </form>
 
     </div>
   )
