@@ -4,7 +4,6 @@ import api from './Halper/AxiosConfig';
 
 
 const AddProducts = () => {
-
   const[producteData,setproducteData] = useState({Name:"",Prise:"",Image:"",Category:"",Quantity:""})
 
   function handalChange(e){
@@ -15,7 +14,7 @@ const AddProducts = () => {
     if(producteData.Name && producteData.Prise && producteData.Image && producteData.Category && producteData.Quantity ){
          
       try{
-        const response = await api.post('/Product/Addproducts',{productData : producteData})
+        const response = await api.post('/Product/addproduct',{productData : producteData})
           if(response?.data.success){
              toast.success(response.data.massgae)
              setproducteData({Name:"",Prise:"",Image:"",Category:"",Quantity:""})
