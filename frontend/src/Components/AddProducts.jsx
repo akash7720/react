@@ -4,20 +4,20 @@ import api from './Halper/AxiosConfig';
 
 
 const AddProducts = () => {
-  const[producteData,setproducteData] = useState({Name:"",Prise:"",Image:"",Category:"",Quantity:""})
+  const[producteData,setproducteData] = useState({Name:"",Price:"",Image:"",Category:"",Quantity:""})
 
   function handalChange(e){
     setproducteData({...producteData, [e.target.name]: e.target.value })}
   
   async function handleSubmit(e){
     e.preventDefault()
-    if(producteData.Name && producteData.Prise && producteData.Image && producteData.Category && producteData.Quantity ){
-         
+    if(producteData.Name && producteData.Price && producteData.Image && producteData.Category && producteData.Quantity ){
+      
       try{
-        const response = await api.post('/Product/addproduct',{productData : producteData})
+        const response = await api.post('/Product/addProduct',{producteData})
           if(response?.data.success){
-             toast.success(response.data.massgae)
-             setproducteData({Name:"",Prise:"",Image:"",Category:"",Quantity:""})
+             toast.success(response.data.messgae)
+             setproducteData({Name:"",Price:"",Image:"",Category:"",Quantity:""})
           }
       }catch (error){
         toast.error(error.response.Data.error)
@@ -33,7 +33,7 @@ const AddProducts = () => {
       <label>Name:</label><br/>
       <input type='text' onChange={handalChange} value={producteData.Name} name='Name' ></input><br/>
       <label>Prise:</label><br/>
-      <input type='number'  onChange={handalChange}   value={producteData.Prise} name='Prise'></input><br/>
+      <input type='number'  onChange={handalChange}   value={producteData.Price} name='Price'></input><br/>
       <label>Image:</label><br/>
       <input type='url'  onChange={handalChange}  value={producteData.Image} name='Image' ></input><br/>
       <label>Category:</label><br/>
