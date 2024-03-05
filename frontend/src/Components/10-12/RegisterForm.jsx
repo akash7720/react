@@ -110,6 +110,8 @@ const RegisterForm = () => {
                 <label>Confirm Password</label><br />
                 <input type='password' required onChange={handleChange} name='confirmPassword' value={userData.confirmPassword} /><br />
                 <input type='submit' value="Register" />
+
+                
             </form>
         </div>
     )
